@@ -1,0 +1,32 @@
+*lightswitch.txt*  Respond to OS theme changes automatically.
+
+Author:  Josh Petrie <http://joshpetrie.net>
+License: MIT
+
+INTRODUCTION                                    *lightswitch*
+Lightswitch enables automatic response to macOS appearance theme changes. At
+startup, and repeatedly at a user-defined interval, Lightswitch checks the
+value of the appearance theme and updates `background` accordingly.
+
+Lightswitch only functions on macOS. It has no effect on other platforms.
+
+OPTIONS                                         *lightswitch-options*
+
+|g:lightswitch-interval|                          *lightswitch-interval*
+The time, in milliseconds, between checks of the current OS appearance theme.
+
+This value must be set at startup (in your `.vimrc` or similar) as
+Lightswitch's background timer is created as soon as the plugin is loaded. If
+not set, the default value is 1000.
+
+If set to zero or a negative number, Lightswitch will not initialize its
+background timer and will only perform the OS appearance check once, at
+startup.
+
+ABOUT                                           *lightswitch-about*
+Lightswitch is written and maintained by Josh Petrie. Grab the latest version,
+report a bug, or request a new feature via GitHub: >
+
+  https://github.com/jpetrie/vim-lightswitch
+<
+Lightswitch is distributed under the terms of the MIT license.
